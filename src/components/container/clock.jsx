@@ -7,35 +7,31 @@ const Clock = () => {
         edad: 0,
         nombre: 'Martin',
         apellido: 'San José'            
-    }
+    };
 
     const [date,setDate] = useState(actualHour);
 
- 
-    function cambiarEdad(){
-        setDate(
-            {
-                fecha:new Date(),
-                edad: date.edad ++,
-                nombre:'Martin',
-                apellido: 'San José'
-            }
-        )
-    }
 
-    let intervalo = setInterval (
-        () => cambiarEdad(), 1000
-     );
 
-    useEffect(() => {
-            console.log("Cambio el intervalo");
-    }, []);
-
-    useEffect(() => {
+    useEffect(()=>{
+        const intervalo = setInterval(()=>{
+            cambiarEdad();
+        },1000)
         return () => {
             clearInterval(intervalo);
         };
-    },[]);
+    });
+
+    function cambiarEdad(){
+        return setDate(
+            {
+                fecha:date.fecha,
+                edad: date.edad + 1,
+                nombre:date.nombre,
+                apellido:date.apellido
+            }
+        )
+    }
 
 
 
