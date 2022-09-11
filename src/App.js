@@ -1,12 +1,14 @@
 import './App.css';
-import ContactListComponent from './components/container/contact_list';
+import Clock from './components/container/clock';
+
+
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <ContactListComponent></ContactListComponent>
-      </header>
+      <Clock ></Clock>
     </div>
   );
 }
