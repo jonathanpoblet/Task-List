@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/React-exercise-123/static/css/main.073c9b0a.css",
-    "main.js": "/React-exercise-123/static/js/main.7145b59a.js",
+    "main.css": "/React-exercise-123/static/css/main.7a2e6967.css",
+    "main.js": "/React-exercise-123/static/js/main.2117db95.js",
     "static/js/787.28cb0dcd.chunk.js": "/React-exercise-123/static/js/787.28cb0dcd.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/React-exercise-123/static/media/bootstrap-icons.e559bf06bc84fd9525e6.woff",
+    "static/media/bootstrap-icons.woff2?": "/React-exercise-123/static/media/bootstrap-icons.ea98e12d2d58747f9fc5.woff2",
     "index.html": "/React-exercise-123/index.html",
-    "main.073c9b0a.css.map": "/React-exercise-123/static/css/main.073c9b0a.css.map",
-    "main.7145b59a.js.map": "/React-exercise-123/static/js/main.7145b59a.js.map",
+    "main.7a2e6967.css.map": "/React-exercise-123/static/css/main.7a2e6967.css.map",
+    "main.2117db95.js.map": "/React-exercise-123/static/js/main.2117db95.js.map",
     "787.28cb0dcd.chunk.js.map": "/React-exercise-123/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.7145b59a.js"
+    "static/css/main.7a2e6967.css",
+    "static/js/main.2117db95.js"
   ]
 }
