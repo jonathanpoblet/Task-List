@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 
 const RegisterForm = () => {
 
-    const initialData = [
+    const initalData = [
         {
             user:'',
-            name:'',
+            password:'',
             email:'',
             password:''
         }
     ];
 
-    const [data,setData] = useState(initialData);
+    const [data, setData] = useState(initalData);
 
     return (
         <div>

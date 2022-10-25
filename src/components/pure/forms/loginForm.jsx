@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 const LoginForm = () => {
 
-    const initialCredentials = [
+    const initalCredentials = [
         {
             user:'',
             password:''
         }
     ];
 
-    const [credentials, setCredentials] = useState(initialCredentials);
+    const [credentials, setCredentials] = useState(initalCredentials);
 
     return (
         <div>
