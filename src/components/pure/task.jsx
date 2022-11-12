@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Task } from '../../models/task.class';
 import '../../styles/task.scss';
@@ -6,13 +6,6 @@ import { LEVELS } from '../../models/levels.enum';
 
 
 const TaskComponent = ({ task, completed, remove}) => {
-
-    useEffect(() => {
-        console.log('Created Task')
-        return () => {
-            console.log(`Task: ${task.name} is going to unmount`)
-        };
-    }, [task]);
 
     function taskLevelBadge() {
         switch (task.level) {
@@ -58,15 +51,14 @@ const TaskComponent = ({ task, completed, remove}) => {
     }
 
     const taskPending = {
-        color:'tomato',
-        fontWeight: 'bold',
+        color:'333',
     }
 
     return (
         <tr className='fw-normal' style={task.completed ? taskCompleted : taskPending}>
-            <th>
+            <td>
                 <span className='ms-2'>{ task.name }</span>
-            </th>
+            </td>
             <td className='align-middle'>
                 <span>{ task.description }</span>
             </td>

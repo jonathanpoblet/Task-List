@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { LEVELS } from '../../models/levels.enum';
-import { Task } from '../../models/task.class';
 import TaskComponent from '../pure/task';
 import '../../styles/task.scss'
-import TaskForm from '../pure/forms/taskForm';
 import TaskForm2 from '../pure/forms/taskForm2';
 
 const TaskListComponent = () => {
 
-    const defaultTask = new Task('Example', 'Default description', true, LEVELS.NORMAL);
-    const defaultTask2 = new Task('Example 2', 'Default description 2', false, LEVELS.URGENT);
-    const defaultTask3 = new Task('Example 3', 'Default description 3', true, LEVELS.BLOCKING);
-
-    const [tasks, setTasks] = useState([ defaultTask,defaultTask2,defaultTask3 ]);
+    const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -43,7 +36,7 @@ const TaskListComponent = () => {
 
     const Table = () => {
         return(
-            <table>
+            <table className='table'>
                 <thead>
                     <tr>
                         <th scope='col'>Title</th>
@@ -80,8 +73,7 @@ const TaskListComponent = () => {
         tasksTable = 
         (
             <div>
-                <h3>There are no tasks</h3>
-                <h4>Please create a task</h4>
+                <h6>Please create a task</h6>
             </div>
         )
     }
@@ -97,10 +89,14 @@ const TaskListComponent = () => {
             <div className='col-12'>
                 <div className='card'> 
                     <div className='card-header p-3'>
-                        <h5>
+                        <h5 className='title'>
                             Your Tasks
                         </h5>
                     </div>
+                    <TaskForm2
+                        add={addTask}
+                        length={tasks.length}
+                    />
                     <div className='card-body' 
                         data-mdb-perfect-scrollbar = 'true'
                         style={ {position: 'relative', height: '500'} }
@@ -110,11 +106,6 @@ const TaskListComponent = () => {
                     </div>
                 </div>
             </div>
-            <TaskForm2
-                add={addTask}
-                length={tasks.length}
-            >
-            </TaskForm2>
         </div>
     );
 }
